@@ -8,6 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "deploy": "ng build --output-path docs --base-href https://yolshin195.github.io/admin.ygreens.ru",
     "e2e": "ng e2e"
   },
   "repository": {
