@@ -1,0 +1,23 @@
+<header class="layout-topbar">
+    <p-menubar [model]="items" styleClass="p-mb-4">
+        <ng-template pTemplate="start">
+            YGreens
+        </ng-template>
+        <ng-template pTemplate="end">
+            <input type="text" pInputText placeholder="Search">
+        </ng-template>
+    </p-menubar>
+</header>
+
+<ng-template [ngIf]="!userServer.authenticated">
+    <app-login></app-login>
+</ng-template>
+
+<ng-template [ngIf]="userServer.authenticated">
+    <div class="layout-menu-wrapper">
+        <p-panelMenu [model]="itemsMenuRight"></p-panelMenu>
+    </div>
+    <div class="layout-main">
+        <router-outlet></router-outlet>
+    </div>
+</ng-template>

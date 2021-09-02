@@ -1,0 +1,17 @@
+<form class="p-fluid p-sm-5" style="margin: auto;" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p-card header="Вход в систему">
+        <span class="p-float-label p-field">
+            <input id="float-input" style="width:100%;" type="text" formControlName="phone" pInputText>
+            <label for="float-input">Имя пользователя</label>
+        </span>
+        <span class="p-float-label p-mt-3 p-field">
+            <p-password [toggleMask]="true" formControlName="password"></p-password>
+            <label for="float-input">Пароль</label>
+        </span>
+        <span class="p-field-checkbox p-mt-3 p-field">
+            <p-inputSwitch inputId="float-input-is-save" formControlName="isSave"></p-inputSwitch>
+            <label for="float-input-is-save">Запомнить меня</label>
+        </span>
+        <p-button type="submit" label="Войти" icon="pi pi-check"></p-button>
+    </p-card>
+</form>
